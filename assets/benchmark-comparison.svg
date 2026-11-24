@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" width="880" height="400" role="img" aria-label="hippo-cache Lab Benchmark Scorecard">
+  <rect width="880" height="400" fill="#FFFFFF" />
+  <rect x="6" y="6" width="868" height="388" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+
+  <text x="24" y="34" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="800" fill="#0A0A0A">FIG 4. LAB SCORECARD — HEAD-TO-HEAD ARCHITECTURAL BENCHMARK</text>
+  <text x="24" y="51" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#525252">Auto-generated from benchmarks/results.json · 50 turns · 8 codebase migrations · 5 two-hop chains · 3 secret leaks</text>
+
+  
+      <g transform="translate(24, 66)">
+        <rect x="0" y="0" width="408" height="148" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+        <rect x="0" y="0" width="408" height="34" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1" />
+        <text x="12" y="15" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="800" fill="#0A0A0A">TOKEN REDUCTION VS NAIVE DUMP</text>
+        <text x="12" y="28" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Higher is cheaper (50-turn cumulative)</text>
+    
+        <circle cx="14" cy="55" r="3.5" fill="#16A34A" />
+        <text x="24" y="59" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="800" fill="#0A0A0A">hippo-cache</text>
+        <rect x="144" y="49" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="49" width="188.4" height="12" fill="#16A34A" />
+        <text x="350" y="59" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="800" fill="#0A0A0A">94.2%</text>
+      
+        <circle cx="14" cy="80" r="3.5" fill="#CA8A04" />
+        <text x="24" y="84" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Vector Top-8 RAG</text>
+        <rect x="144" y="74" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="74" width="178.6" height="12" fill="#CA8A04" />
+        <text x="350" y="84" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">89.3%</text>
+      
+        <circle cx="14" cy="105" r="3.5" fill="#525252" />
+        <text x="24" y="109" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Sliding Window-10</text>
+        <rect x="144" y="99" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="99" width="170.0" height="12" fill="#262626" />
+        <text x="350" y="109" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">85%</text>
+      
+        <circle cx="14" cy="130" r="3.5" fill="#DC2626" />
+        <text x="24" y="134" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Naive Full Dump</text>
+        <rect x="144" y="124" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="124" width="2.0" height="12" fill="#DC2626" />
+        <text x="350" y="134" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">0%</text>
+      </g>
+  
+      <g transform="translate(448, 66)">
+        <rect x="0" y="0" width="408" height="148" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+        <rect x="0" y="0" width="408" height="34" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1" />
+        <text x="12" y="15" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="800" fill="#0A0A0A">FRESH TRUTH ACCURACY (BI-TEMPORAL)</text>
+        <text x="12" y="28" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Returns migrated fact AND zero stale ghosts</text>
+    
+        <circle cx="14" cy="55" r="3.5" fill="#16A34A" />
+        <text x="24" y="59" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="800" fill="#0A0A0A">hippo-cache</text>
+        <rect x="144" y="49" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="49" width="200.0" height="12" fill="#16A34A" />
+        <text x="350" y="59" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="800" fill="#0A0A0A">100%</text>
+      
+        <circle cx="14" cy="80" r="3.5" fill="#CA8A04" />
+        <text x="24" y="84" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Vector Top-8 RAG</text>
+        <rect x="144" y="74" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="74" width="2.0" height="12" fill="#CA8A04" />
+        <text x="350" y="84" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">0%</text>
+      
+        <circle cx="14" cy="105" r="3.5" fill="#525252" />
+        <text x="24" y="109" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Sliding Window-10</text>
+        <rect x="144" y="99" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="99" width="2.0" height="12" fill="#262626" />
+        <text x="350" y="109" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">0%</text>
+      
+        <circle cx="14" cy="130" r="3.5" fill="#DC2626" />
+        <text x="24" y="134" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Naive Full Dump</text>
+        <rect x="144" y="124" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="124" width="2.0" height="12" fill="#DC2626" />
+        <text x="350" y="134" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">0%</text>
+      </g>
+  
+      <g transform="translate(24, 228)">
+        <rect x="0" y="0" width="408" height="148" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+        <rect x="0" y="0" width="408" height="34" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1" />
+        <text x="12" y="15" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="800" fill="#0A0A0A">MULTI-HOP ASSOCIATIVE RECALL</text>
+        <text x="12" y="28" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Zero-keyword-overlap 2-hop PPR chains</text>
+    
+        <circle cx="14" cy="55" r="3.5" fill="#16A34A" />
+        <text x="24" y="59" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="800" fill="#0A0A0A">hippo-cache</text>
+        <rect x="144" y="49" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="49" width="160.0" height="12" fill="#16A34A" />
+        <text x="350" y="59" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="800" fill="#0A0A0A">80%</text>
+      
+        <circle cx="14" cy="80" r="3.5" fill="#CA8A04" />
+        <text x="24" y="84" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Vector Top-8 RAG</text>
+        <rect x="144" y="74" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="74" width="40.0" height="12" fill="#CA8A04" />
+        <text x="350" y="84" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">20%</text>
+      
+        <circle cx="14" cy="105" r="3.5" fill="#525252" />
+        <text x="24" y="109" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Sliding Window-10</text>
+        <rect x="144" y="99" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="99" width="2.0" height="12" fill="#262626" />
+        <text x="350" y="109" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">0%</text>
+      
+        <circle cx="14" cy="130" r="3.5" fill="#DC2626" />
+        <text x="24" y="134" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="400" fill="#0A0A0A">Naive Full Dump</text>
+        <rect x="144" y="124" width="200" height="12" fill="#F7F7F7" stroke="#D4D4D4" stroke-width="1" />
+        <rect x="144" y="124" width="200.0" height="12" fill="#DC2626" />
+        <text x="350" y="134" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="600" fill="#0A0A0A">100%</text>
+      </g>
+
+  <!-- Panel 4: Latency & Security Telemetry Box -->
+  <g transform="translate(448, 228)">
+    <rect x="0" y="0" width="408" height="148" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.5" />
+    <rect x="0" y="0" width="408" height="34" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1" />
+    <text x="12" y="15" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="800" fill="#0A0A0A">RUNTIME TELEMETRY &amp; GOVERNANCE</text>
+    <text x="12" y="28" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Zero external API calls · Pure local SQLite WAL</text>
+
+    <circle cx="18" cy="56" r="4" fill="#16A34A" />
+    <text x="30" y="60" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#0A0A0A">Query Latency (p50 / p95): <tspan font-weight="800">1.48ms / 2.22ms</tspan></text>
+
+    <circle cx="18" cy="82" r="4" fill="#16A34A" />
+    <text x="30" y="86" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#0A0A0A">Overall Recall@Budget: <tspan font-weight="800">94%</tspan> (at 340 tok)</text>
+
+    <circle cx="18" cy="108" r="4" fill="#DC2626" />
+    <text x="30" y="112" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#0A0A0A">Secrets Redacted Pre-Write: <tspan font-weight="800">3/3 (100%)</tspan></text>
+
+    <circle cx="18" cy="134" r="4" fill="#CA8A04" />
+    <text x="30" y="138" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" fill="#525252">Zero GPUs harmed. Measured on SQLite, not vibes.</text>
+  </g>
+</svg>

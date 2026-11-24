@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="920" height="480" role="img" aria-label="hippo-cache Cognitive Architecture Diagram">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#0A0A0A" />
+    </marker>
+    <marker id="arr-y" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#CA8A04" />
+    </marker>
+  </defs>
+
+  <rect width="920" height="480" fill="#FFFFFF" />
+  <rect x="6" y="6" width="908" height="468" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+
+  <text x="24" y="34" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="15" font-weight="800" fill="#0A0A0A">FIG 3. INSIDE THE HIPPO — 4-TIER COGNITIVE MEMORY ENGINE</text>
+  <text x="24" y="51" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#525252">Zero-dependency Node.js 22+ · Local SQLite WAL + FTS5 · Portable SKILL.md + MCP Server + Optional B&amp;W Inspector</text>
+
+  <!-- TOP LAYER: Coding Agents -->
+  <rect x="24" y="68" width="872" height="54" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.6" />
+  <text x="38" y="88" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10" font-weight="700" fill="#525252">CODING AGENTS (CONSUMING PORTABLE SKILL.md + MCP STDIO / HTTP / CLI)</text>
+  <g font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" font-weight="700" fill="#0A0A0A">
+    <rect x="38" y="96" width="128" height="20" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" />
+    <text x="102" y="110" text-anchor="middle">Claude Code</text>
+    <rect x="180" y="96" width="128" height="20" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" />
+    <text x="244" y="110" text-anchor="middle">Codex CLI</text>
+    <rect x="322" y="96" width="128" height="20" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" />
+    <text x="386" y="110" text-anchor="middle">Cursor</text>
+    <rect x="464" y="96" width="128" height="20" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" />
+    <text x="528" y="110" text-anchor="middle">Windsurf</text>
+    <rect x="606" y="96" width="136" height="20" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.2" />
+    <text x="674" y="110" text-anchor="middle">Antigravity</text>
+    <rect x="756" y="96" width="124" height="20" fill="#0A0A0A" />
+    <circle cx="769" cy="106" r="3.5" fill="#16A34A" />
+    <text x="822" y="110" text-anchor="middle" fill="#FFFFFF">MCP + SKILL</text>
+  </g>
+
+  <!-- Arrows down into Write & Read paths -->
+  <line x1="220" y1="122" x2="220" y2="146" stroke="#0A0A0A" stroke-width="1.8" marker-end="url(#arr)" />
+  <text x="228" y="138" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="700" fill="#0A0A0A">memory_remember()</text>
+
+  <line x1="680" y1="146" x2="680" y2="122" stroke="#0A0A0A" stroke-width="1.8" marker-end="url(#arr)" />
+  <text x="688" y="138" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.5" font-weight="700" fill="#0A0A0A">memory_recall() / expand()</text>
+
+  <!-- LEFT COLUMN: WRITE PATH -->
+  <rect x="24" y="148" width="414" height="190" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.4" stroke-dasharray="5 3" />
+  <text x="36" y="166" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">WRITE PATH (GATED INGESTION)</text>
+  
+    <g>
+      <rect x="36" y="176" width="186" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="36" y="176" width="186" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="48" cy="188" r="4" fill="#DC2626" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="58" y="192" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">1. SECRET FIREWALL</text>
+      <text x="46" y="218" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Regex + Shannon Entropy</text>
+      <text x="46" y="233" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">"Nice try, API key."</text>
+    </g>
+  
+    <g>
+      <rect x="240" y="176" width="186" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="240" y="176" width="186" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="252" cy="188" r="4" fill="#16A34A" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="262" y="192" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">2. DEDUP + COMPRESS</text>
+      <text x="250" y="218" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">SHA-256 + 64-bit SimHash</text>
+      <text x="250" y="233" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Extractive L0 / L1 / L2</text>
+    </g>
+  
+    <g>
+      <rect x="36" y="258" width="186" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="36" y="258" width="186" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="48" cy="270" r="4" fill="#CA8A04" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="58" y="274" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">3. BI-TEMPORAL COURT</text>
+      <text x="46" y="300" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Slot & migration cues</text>
+      <text x="46" y="315" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">"Jest is dead -> Vitest"</text>
+    </g>
+  
+    <g>
+      <rect x="240" y="258" width="186" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="240" y="258" width="186" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="252" cy="270" r="4" fill="#16A34A" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="262" y="274" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">4. ZETTELKASTEN LINK</text>
+      <text x="250" y="300" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Code/File Entity Graph</text>
+      <text x="250" y="315" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Auto RELATES / FIXES</text>
+    </g>
+  <line x1="222" y1="210" x2="238" y2="210" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#arr)" />
+  <line x1="333" y1="244" x2="333" y2="256" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#arr)" />
+  <line x1="238" y1="292" x2="224" y2="292" stroke="#CA8A04" stroke-width="1.5" marker-end="url(#arr-y)" />
+
+  <!-- RIGHT COLUMN: READ PATH -->
+  <rect x="462" y="148" width="434" height="190" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.4" stroke-dasharray="5 3" />
+  <text x="474" y="166" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">READ PATH (TOKEN-FRUGAL RECALL)</text>
+  
+    <g>
+      <rect x="474" y="176" width="196" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="474" y="176" width="196" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="486" cy="188" r="4" fill="#16A34A" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="496" y="192" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">1. HYBRID RRF SEEDS</text>
+      <text x="484" y="218" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">FTS5 BM25 + 512-d Vector</text>
+      <text x="484" y="233" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Reciprocal Rank Fusion</text>
+    </g>
+  
+    <g>
+      <rect x="688" y="176" width="196" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="688" y="176" width="196" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="700" cy="188" r="4" fill="#16A34A" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="710" y="192" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">2. HIPPORAG PPR</text>
+      <text x="698" y="218" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Personalized PageRank</text>
+      <text x="698" y="233" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">2-Hop Associative Spread</text>
+    </g>
+  
+    <g>
+      <rect x="474" y="258" width="196" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="474" y="258" width="196" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="486" cy="270" r="4" fill="#CA8A04" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="496" y="274" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">3. ACT-R ACTIVATION</text>
+      <text x="484" y="300" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Power-Law + Spacing S_i</text>
+      <text x="484" y="315" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Boosts used, fades noise</text>
+    </g>
+  
+    <g>
+      <rect x="688" y="258" width="196" height="68" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="688" y="258" width="196" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="700" cy="270" r="4" fill="#16A34A" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="710" y="274" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">4. SUBMODULAR KNAPSACK</text>
+      <text x="698" y="300" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Hard Token Budget <= T</text>
+      <text x="698" y="315" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">L0/L1 pack + L2 expand</text>
+    </g>
+  <line x1="670" y1="210" x2="686" y2="210" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#arr)" />
+  <line x1="786" y1="244" x2="786" y2="256" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#arr)" />
+  <line x1="670" y1="292" x2="686" y2="292" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#arr)" />
+
+  <!-- BOTTOM LAYER: SQLite Local Brain + Sleep Cycle -->
+  <line x1="230" y1="338" x2="230" y2="364" stroke="#0A0A0A" stroke-width="1.8" marker-end="url(#arr)" />
+  <line x1="680" y1="364" x2="680" y2="338" stroke="#0A0A0A" stroke-width="1.8" marker-end="url(#arr)" />
+
+  
+    <g>
+      <rect x="24" y="366" width="566" height="94" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="24" y="366" width="566" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="36" cy="378" r="4" fill="#16A34A" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="46" y="382" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">LOCAL SQLITE 3.51+ (WAL MODE · ACID · SINGLE PORTABLE .DB FILE)</text>
+      <text x="34" y="408" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Stores: [L0 Working] [L1 Episodic] [L2 Semantic] [L3 Procedural]  ·  FTS5 Code Tokenizer</text>
+      <text x="34" y="423" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Tables: memories · memories_fts · entities · memory_edges · access_events · contradictions · telemetry</text>
+    </g>
+  
+    <g>
+      <rect x="610" y="366" width="286" height="94" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+      <rect x="610" y="366" width="286" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
+      <circle cx="622" cy="378" r="4" fill="#CA8A04" stroke="#0A0A0A" stroke-width="0.9" />
+      <text x="632" y="382" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">COGNITIVE SLEEP CYCLE</text>
+      <text x="620" y="408" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Refresh ACT-R · Merge SimHash dups</text>
+      <text x="620" y="423" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Promote clusters · Archive cold noise</text>
+    </g>
+  <line x1="610" y1="413" x2="592" y2="413" stroke="#CA8A04" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#arr-y)" />
+</svg>

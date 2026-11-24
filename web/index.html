@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>hippo-cache — Cognitive Memory Inspector</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <!-- Minimalist B&W Hippo Lab Mark with Traffic-Light LEDs -->
+      <svg class="brand-mark" viewBox="0 0 44 44" width="36" height="36" aria-hidden="true">
+        <rect x="1.5" y="1.5" width="41" height="41" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+        <!-- Hippo silhouette in crisp black ink -->
+        <path d="M10 27 C10 18 15 14 23 14 C30 14 35 18 35 25 C35 30 31 33 25 33 L15 33 C11 33 10 30 10 27 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="2" />
+        <circle cx="15" cy="14" r="2.8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+        <circle cx="24" cy="13.5" r="2.8" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.8" />
+        <!-- Lab spectacles -->
+        <rect x="14" y="19" width="5.5" height="4.5" fill="none" stroke="#0A0A0A" stroke-width="1.5" />
+        <rect x="21.5" y="19" width="5.5" height="4.5" fill="none" stroke="#0A0A0A" stroke-width="1.5" />
+        <line x1="19.5" y1="21.2" x2="21.5" y2="21.2" stroke="#0A0A0A" stroke-width="1.5" />
+        <!-- Snout nostrils -->
+        <circle cx="29.5" cy="26.5" r="1.1" fill="#0A0A0A" />
+        <circle cx="32.3" cy="26.5" r="1.1" fill="#0A0A0A" />
+        <!-- Traffic light indicators -->
+        <circle cx="7" cy="7" r="2" fill="#16A34A" />
+        <circle cx="13" cy="7" r="2" fill="#CA8A04" />
+        <circle cx="19" cy="7" r="2" fill="#DC2626" />
+      </svg>
+      <div>
+        <h1>hippo-cache</h1>
+        <p class="subtitle">ACT-R · HippoRAG PPR · Bi-Temporal Graph · Submodular Knapsack</p>
+      </div>
+    </div>
+
+    <div class="topbar-controls">
+      <label class="ns-control">
+        <span>NS</span>
+        <input id="ns-input" type="text" value="default" aria-label="Namespace" />
+      </label>
+      <span id="sse-badge" class="status-pill"><span class="dot dot-yellow"></span>CONNECTING</span>
+      <button id="btn-seed" class="btn">Seed Demo</button>
+      <button id="btn-sleep" class="btn">Run Sleep Cycle</button>
+      <button id="btn-open-add" class="btn btn-primary">+ Remember</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- KPI Telemetry Strip -->
+    <section class="kpi-grid" aria-label="Telemetry Summary">
+      <article class="kpi-card">
+        <div class="kpi-label">MEMORY HEALTH</div>
+        <div class="kpi-value" id="kpi-total">0</div>
+        <div class="kpi-meta">
+          <span><span class="dot dot-green"></span><strong id="kpi-green">0</strong> active</span>
+          <span><span class="dot dot-yellow"></span><strong id="kpi-yellow">0</strong> fading/sup</span>
+          <span><span class="dot dot-red"></span><strong id="kpi-red">0</strong> stale/arch</span>
+        </div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">TOKEN SAVINGS</div>
+        <div class="kpi-value"><span class="dot dot-green"></span><span id="kpi-savings">0%</span></div>
+        <div class="kpi-meta" id="kpi-tokens-meta">L1 compression vs naive L2 dump</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">AVG RECALL LATENCY</div>
+        <div class="kpi-value" id="kpi-latency">0.0 ms</div>
+        <div class="kpi-meta" id="kpi-recalls-meta">0 budgeted recalls recorded</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">CONTRADICTIONS RESOLVED</div>
+        <div class="kpi-value"><span class="dot dot-yellow"></span><span id="kpi-contradictions">0</span></div>
+        <div class="kpi-meta" id="kpi-graph-meta">0 entities · 0 edges</div>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-label">SECRETS REDACTED</div>
+        <div class="kpi-value"><span class="dot dot-red"></span><span id="kpi-secrets">0</span></div>
+        <div class="kpi-meta">Write-path credential firewall</div>
+      </article>
+    </section>
+
+    <!-- Recall Simulator + Token Budget Lab -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>Budgeted Recall Simulator</h2>
+          <p class="hint">Hybrid FTS5 BM25 + 512-d Vector + HippoRAG PPR + Submodular Knapsack</p>
+        </div>
+        <div class="legend">
+          <span><span class="dot dot-green"></span>ACTIVE</span>
+          <span><span class="dot dot-yellow"></span>DECAYING / SUPERSEDED</span>
+          <span><span class="dot dot-red"></span>STALE / ARCHIVED</span>
+        </div>
+      </div>
+
+      <form id="recall-form" class="recall-controls">
+        <input id="recall-query" type="text" placeholder="Ask like an agent: e.g. deploy timeout healthcheck session store" />
+        <label class="slider-group">
+          <span>BUDGET: <strong id="budget-val">450</strong> tok</span>
+          <input id="recall-budget" type="range" min="80" max="1800" step="20" value="450" />
+        </label>
+        <select id="recall-disclosure" aria-label="Disclosure tier">
+          <option value="auto">Auto (L1 + L0)</option>
+          <option value="l0">L0 Handles Only</option>
+          <option value="l1">L1 Abstracts</option>
+          <option value="l2">L2 Verbatim</option>
+        </select>
+        <label class="check-group">
+          <input id="recall-superseded" type="checkbox" />
+          <span>Show superseded</span>
+        </label>
+        <button type="submit" class="btn btn-primary">Recall</button>
+      </form>
+
+      <div id="recall-meter" class="token-meter hidden">
+        <div class="meter-row">
+          <span id="meter-label"></span>
+          <span id="meter-latency"></span>
+        </div>
+        <div class="meter-track">
+          <div id="meter-fill" class="meter-fill"></div>
+        </div>
+      </div>
+
+      <div id="recall-results" class="recall-results">
+        <div class="empty-state">Run a recall query above or click <strong>Seed Demo</strong> to test multi-hop PPR &amp; token savings.</div>
+      </div>
+    </section>
+
+    <!-- Dual Visualization Grid: Associative Knowledge Graph + ACT-R Forgetting Curve -->
+    <section class="viz-grid">
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>Hippocampal Associative Graph</h2>
+            <p class="hint">Click any node to inspect verbatim L2 payload, entities &amp; edges</p>
+          </div>
+          <div class="legend">
+            <span>━━ Zettelkasten</span>
+            <span>┄┄ <span class="txt-yellow">SUPERSEDES</span></span>
+          </div>
+        </div>
+        <div class="svg-frame">
+          <svg id="graph-svg" viewBox="0 0 640 380" role="img" aria-label="Associative Memory Graph"></svg>
+        </div>
+        <div id="node-inspector" class="inspector hidden"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <h2>ACT-R / Ebbinghaus Decay Model</h2>
+            <p class="hint">Power-law activation B<sub>i</sub>(t) with spaced-rehearsal stability across 30 days</p>
+          </div>
+        </div>
+        <div class="svg-frame">
+          <svg id="decay-svg" viewBox="0 0 540 240" role="img" aria-label="ACT-R Activation Decay Curves"></svg>
+        </div>
+
+        <div class="subhead">Bi-Temporal Contradiction Log</div>
+        <div id="contradictions-list" class="contradictions-list">
+          <div class="empty-state">No contradictions detected yet.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Memory Vault Table -->
+    <section class="panel">
+      <div class="panel-head">
+        <div>
+          <h2>Memory Vault</h2>
+          <p class="hint">Local SQLite WAL + FTS5 stores (L0 / L1 / L2 token breakdown)</p>
+        </div>
+        <div class="vault-filters">
+          <select id="filter-kind" aria-label="Filter by kind">
+            <option value="all">All kinds</option>
+            <option value="semantic">semantic</option>
+            <option value="procedural">procedural</option>
+            <option value="episodic">episodic</option>
+            <option value="working">working</option>
+          </select>
+          <select id="filter-status" aria-label="Filter by status">
+            <option value="all">All statuses</option>
+            <option value="active">active</option>
+            <option value="superseded">superseded</option>
+            <option value="archived">archived</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="vault-table">
+          <thead>
+            <tr>
+              <th>STATE</th>
+              <th>ID</th>
+              <th>KIND</th>
+              <th>TITLE / SLOT</th>
+              <th>ACT-R</th>
+              <th>TOKENS (L0/L1/L2)</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="vault-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add Memory Modal -->
+  <dialog id="add-dialog" class="modal">
+    <form id="add-form" method="dialog">
+      <div class="modal-head">
+        <h3>Store New Memory</h3>
+        <button type="button" id="btn-close-add" class="btn">Close</button>
+      </div>
+      <div class="form-grid">
+        <label>
+          <span>Kind</span>
+          <select id="add-kind">
+            <option value="semantic">semantic (architecture / facts)</option>
+            <option value="procedural">procedural (fix playbook / rule)</option>
+            <option value="episodic">episodic (session discovery)</option>
+            <option value="working">working (ephemeral scratchpad)</option>
+          </select>
+        </label>
+        <label>
+          <span>Decision Slot (optional)</span>
+          <input id="add-slot" type="text" placeholder="e.g. test_runner, session_store" />
+        </label>
+        <label>
+          <span>Tags (comma-separated)</span>
+          <input id="add-tags" type="text" placeholder="auth, redis, deploy" />
+        </label>
+        <label>
+          <span>Importance (0.1 – 1.0)</span>
+          <input id="add-importance" type="number" step="0.05" min="0.1" max="1.0" value="0.75" />
+        </label>
+      </div>
+      <label class="block-field">
+        <span>Content (secrets are automatically scrubbed before storage)</span>
+        <textarea id="add-content" rows="4" required placeholder="e.g. Migrated unit test runner from Jest to Vitest; run pnpm vitest run."></textarea>
+      </label>
+      <div class="modal-actions">
+        <button type="submit" class="btn btn-primary">Save to Hippocampus</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast hidden" role="status"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
