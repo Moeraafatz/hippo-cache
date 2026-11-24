@@ -67,8 +67,8 @@
       <rect x="36" y="258" width="186" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
       <circle cx="48" cy="270" r="4" fill="#CA8A04" stroke="#0A0A0A" stroke-width="0.9" />
       <text x="58" y="274" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">3. BI-TEMPORAL COURT</text>
-      <text x="46" y="300" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Slot & migration cues</text>
-      <text x="46" y="315" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">"Jest is dead -> Vitest"</text>
+      <text x="46" y="300" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Slot &amp; migration cues</text>
+      <text x="46" y="315" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">"Jest is dead -&gt; Vitest"</text>
     </g>
   
     <g>
@@ -119,7 +119,7 @@
       <rect x="688" y="258" width="196" height="24" fill="#F7F7F7" stroke="#0A0A0A" stroke-width="1.2" />
       <circle cx="700" cy="270" r="4" fill="#16A34A" stroke="#0A0A0A" stroke-width="0.9" />
       <text x="710" y="274" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="800" fill="#0A0A0A">4. SUBMODULAR KNAPSACK</text>
-      <text x="698" y="300" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Hard Token Budget <= T</text>
+      <text x="698" y="300" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.8" fill="#262626">Hard Token Budget &lt;= T</text>
       <text x="698" y="315" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">L0/L1 pack + L2 expand</text>
     </g>
   <line x1="670" y1="210" x2="686" y2="210" stroke="#0A0A0A" stroke-width="1.5" marker-end="url(#arr)" />

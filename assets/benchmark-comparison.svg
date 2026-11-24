@@ -107,7 +107,7 @@
     <text x="12" y="28" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="9.2" fill="#525252">Zero external API calls · Pure local SQLite WAL</text>
 
     <circle cx="18" cy="56" r="4" fill="#16A34A" />
-    <text x="30" y="60" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#0A0A0A">Query Latency (p50 / p95): <tspan font-weight="800">1.48ms / 2.22ms</tspan></text>
+    <text x="30" y="60" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#0A0A0A">Query Latency (p50 / p95): <tspan font-weight="800">1.43ms / 2.26ms</tspan></text>
 
     <circle cx="18" cy="82" r="4" fill="#16A34A" />
     <text x="30" y="86" font-family="'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="11" fill="#0A0A0A">Overall Recall@Budget: <tspan font-weight="800">94%</tspan> (at 340 tok)</text>

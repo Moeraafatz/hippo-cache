@@ -36,6 +36,13 @@ const RED = '#DC2626';
 const FONT_MONO = "'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace";
 const FONT_SANS = "-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif";
 
+function escXml(str) {
+  return String(str || '')
+    .replace(/&(?!(?:amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
 function writeSvg(name, content) {
   const out = path.join(ASSETS_DIR, name);
   fs.writeFileSync(out, content.trim() + '\n', 'utf8');
@@ -437,9 +444,9 @@ function generateArchitectureDiagram() {
       <rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${WHITE}" stroke="${INK}" stroke-width="1.8" />
       <rect x="${x}" y="${y}" width="${w}" height="24" fill="${PAPER}" stroke="${INK}" stroke-width="1.2" />
       ${ledColor ? `<circle cx="${x + 12}" cy="${y + 12}" r="4" fill="${ledColor}" stroke="${INK}" stroke-width="0.9" />` : ''}
-      <text x="${x + (ledColor ? 22 : 10)}" y="${y + 16}" font-family="${FONT_MONO}" font-size="10.5" font-weight="800" fill="${INK}">${title}</text>
-      <text x="${x + 10}" y="${y + 42}" font-family="${FONT_MONO}" font-size="9.8" fill="${INK2}">${line1}</text>
-      ${line2 ? `<text x="${x + 10}" y="${y + 57}" font-family="${FONT_MONO}" font-size="9.2" fill="${MUTED}">${line2}</text>` : ''}
+      <text x="${x + (ledColor ? 22 : 10)}" y="${y + 16}" font-family="${FONT_MONO}" font-size="10.5" font-weight="800" fill="${INK}">${escXml(title)}</text>
+      <text x="${x + 10}" y="${y + 42}" font-family="${FONT_MONO}" font-size="9.8" fill="${INK2}">${escXml(line1)}</text>
+      ${line2 ? `<text x="${x + 10}" y="${y + 57}" font-family="${FONT_MONO}" font-size="9.2" fill="${MUTED}">${escXml(line2)}</text>` : ''}
     </g>`;
 
   const svg = `
